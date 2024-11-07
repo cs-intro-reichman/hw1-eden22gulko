@@ -19,7 +19,7 @@ public class Ascend {
          int max = Math.max(Math.max(a, b), c);
 
 
-         System.out.println(min + "," + middle + "," + max );
+         System.out.println( min + "," + middle + "," + max );
 
 
 	}
