@@ -17,10 +17,20 @@ public class TimeFormat {
 		int minutes = (second[0] - '0') * 10 + (second[1] - '0');
 
 		if (hours < 12) {
-			System.out.print(hours + ":0" + minutes + " AM ");
+			if (minutes < 10) {
+				
+			 System.out.print(hours + ":0" + minutes + " AM ");
+			}else{
+				System.out.print (hours + ":" + minutes + " AM ");
+			}
 		}else{
-			System.out.print(hours - 12 + ":"+ minutes + " PM ");
+			if (minutes < 10) {
+			System.out.print(hours - 12 + ":0" + minutes + " PM ");
+			}else{
+				System.out.print (hours - 12 + ":" + minutes + " AM ");
+			}
+		}
+
 		}
 
 	}
-}
