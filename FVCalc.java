@@ -8,6 +8,6 @@ public class FVCalc {
         double parentheses = ((newRate + 1));
         double result =  money * (Math.pow(parentheses, years)); 
         
-        System.out.println("After " + years + " years, " + "$" + money + " saved at " + rate + "%" + " will yield $" + (int)result);
+        System.out.println("After " + years + " years, a " + "$" + money + " saved at " + rate + "%" + " will yield $" + (int)result);
 	}
 }
