@@ -10,6 +10,6 @@ public class Bill3 {
 			double shekels = ((double)num/3);
 			double shekels2 = Math.ceil(shekels);
 	
-			System.out.println("Dear " + name1 + ", " + name2 + ", and " + name3 + ": pay " + shekels2 + " Shekels each" );
+			System.out.println("Dear " + name3 + ", " + name2 + ", and " + name1 + ": pay " + shekels2 + " Shekels each" );
 	}
 }
