@@ -16,21 +16,27 @@ public class TimeFormat {
 		int hours = (first[0] - '0') * 10 + (first[1] - '0');
 		int minutes = (second[0] - '0') * 10 + (second[1] - '0');
 
-		if (hours < 12) {
-			if (minutes < 10) {
-				
-			 System.out.print(hours + ":0" + minutes + " AM ");
-			}else{
-				System.out.print (hours + ":" + minutes + " AM ");
-			}
-		}else{
-			if (minutes < 10) {
-			System.out.print(hours - 12 + ":0" + minutes + " PM ");
-			}else{
-				System.out.print (hours - 12 + ":" + minutes + " PM ");
-			}
-		}
-
-		}
-
-	}
+		if (hours == 12) {
+            // For 12:xx, it should remain 12 (PM)
+            if (minutes < 10) {
+                System.out.print(hours + ":0" + minutes + " PM ");
+            } else {
+                System.out.print(hours + ":" + minutes + " PM ");
+            }
+        } else if (hours < 12) {
+            // For hours before 12 (AM)
+            if (minutes < 10) {
+                System.out.print(hours + ":0" + minutes + " AM ");
+            } else {
+                System.out.print(hours + ":" + minutes + " AM ");
+            }
+        } else {
+            // For hours after 12 (PM)
+            if (minutes < 10) {
+                System.out.print((hours - 12) + ":0" + minutes + " PM ");
+            } else {
+                System.out.print((hours - 12) + ":" + minutes + " PM ");
+            }
+        }
+    }
+}
