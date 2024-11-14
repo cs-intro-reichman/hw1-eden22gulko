@@ -8,15 +8,14 @@ public class Ascend {
         int c = (int) (Math.random() * lim);
          System.out.println(a + "," + b + "," + c);
         
-
-// now we are figuring out the middle number
-         int one = Math.min(a,b);
-         int two = Math.min(one,c);
-         int middle = Math.max(one,two);
          
 // biggest min and max         
-         int min = Math.min(one,two);
-         int max = Math.max(Math.max(a, b), c);
+         int min = Math.min(a, Math.min(b, c));
+         int max = Math.max(a, Math.max(b, c));
+         
+// finding middle 
+         int sum = a + b + c;
+         int middle = sum - max - min;
 
 
          System.out.println( min + "," + middle + "," + max );
